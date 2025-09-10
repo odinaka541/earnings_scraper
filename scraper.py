@@ -1,11 +1,12 @@
 # 541
 
 """
-production-grade selenium webscraper with:
-- anti-detection measures
-- robust error handling
-- data processing and export
-- logging and monitoring
+TODO:
+1. anti-detection measures
+2. robust error handling
+3. data processing and export
+4. logging and monitoring
+5. ??
 
 """
 
@@ -19,7 +20,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.firefox.options import Options as FirefoxOptions
+from selenium.webdriver.chrome.options import Options as ChromeOptions
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.common.exceptions import (
     TimeoutException, 
@@ -27,8 +28,8 @@ from selenium.common.exceptions import (
     WebDriverException,
     ElementNotInteractableException
 )
-from selenium.webdriver.firefox.service import Service
-from webdriver_manager.firefox import GeckoDriverManager
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 
 
 @dataclass
@@ -66,13 +67,18 @@ class AntiDetectionSystem:
     ]
 
     @classmethod
-    def get_stealth_firefox_options(cls) -> FirefoxOptions:
-        options = FirefoxOptions()
+    def get_stealth_chrome_options(cls) -> ChromeOptions:
+        options = ChromeOptions()
 
-        # Firefox preferences (not arguments like Chrome)
+        options.add_argument("--no-sandbox")
+        options.add_argument("--disable-dev-shm-usage")
+        options.add_argument("--disable-blink-features=AutomationControlled")
+        options.add_experimental_option("excludeSwitches", ["enable-automation"])
+        options.add_experimental_option('useAutomationExtension', False)
+
+        # random user agent
         user_agent = random.choice(cls.USER_AGENTS)
-        options.set_preference("general.useragent.override", user_agent)
-        options.set_preference("dom.webdriver.enabled", False)
+        options.add_argument(f'--user-agent={user_agent}')
 
         return options
 

@@ -221,3 +221,193 @@
 
 2025-09-10 16:38:24,165 - __main__ - ERROR - !!! Multi-day scraping job failed: Message: Process unexpectedly closed with status 1
 
+2025-09-10 16:40:58,413 - __main__ - INFO - Earnings scraper initialized
+2025-09-10 16:40:58,414 - __main__ - INFO - Starting 1-day earnings scraping job
+2025-09-10 16:40:58,414 - __main__ - INFO - !!! Initializing WebDriver with stealth configuration !!!
+2025-09-10 16:40:58,414 - WDM - INFO - ====== WebDriver manager ======
+2025-09-10 16:41:00,455 - WDM - INFO - Get LATEST geckodriver version for 142.0 firefox
+2025-09-10 16:41:00,457 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+2025-09-10 16:41:01,548 - urllib3.connectionpool - DEBUG - https://api.github.com:443 "GET /repos/mozilla/geckodriver/releases/latest HTTP/1.1" 200 3215
+2025-09-10 16:41:01,550 - WDM - INFO - Get LATEST geckodriver version for 142.0 firefox
+2025-09-10 16:41:01,551 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+2025-09-10 16:41:02,565 - urllib3.connectionpool - DEBUG - https://api.github.com:443 "GET /repos/mozilla/geckodriver/releases/latest HTTP/1.1" 200 3215
+2025-09-10 16:41:02,569 - WDM - INFO - Driver [/home/odinaka/.wdm/drivers/geckodriver/linux64/v0.36.0/geckodriver] found in cache
+2025-09-10 16:41:02,569 - selenium.webdriver.common.driver_finder - DEBUG - Skipping Selenium Manager; path to firefox driver specified in Service class: /home/odinaka/.wdm/drivers/geckodriver/linux64/v0.36.0/geckodriver
+2025-09-10 16:41:02,571 - selenium.webdriver.common.service - DEBUG - Started executable: `/home/odinaka/.wdm/drivers/geckodriver/linux64/v0.36.0/geckodriver` in a child process with pid: 33590 using 0 to output -3
+2025-09-10 16:41:02,582 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:37779/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'firefox', 'acceptInsecureCerts': True, 'moz:debuggerAddress': True, 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'moz:firefoxOptions': {'prefs': {'remote.active-protocols': 1, 'general.useragent.override': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:121.0) Gecko/20100101 Firefox/121.0', 'dom.webdriver.enabled': False}}}}}
+2025-09-10 16:41:02,583 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:37779
+2025-09-10 16:41:37,458 - urllib3.connectionpool - DEBUG - http://localhost:37779 "POST /session HTTP/1.1" 500 0
+2025-09-10 16:41:37,459 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=500 | data={"value":{"error":"unknown error","message":"Process unexpectedly closed with status 1","stacktrace":""}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '105', 'date': 'Wed, 10 Sep 2025 15:41:02 GMT'})
+2025-09-10 16:41:37,459 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2025-09-10 16:41:37,513 - __main__ - ERROR - Failed to initialize WebDriver: Message: Process unexpectedly closed with status 1
+
+2025-09-10 16:41:37,513 - __main__ - ERROR - !!! Multi-day scraping job failed: Message: Process unexpectedly closed with status 1
+
+2025-09-10 16:42:22,100 - __main__ - INFO - Earnings scraper initialized
+2025-09-10 16:42:22,100 - __main__ - INFO - Starting 1-day earnings scraping job
+2025-09-10 16:42:22,100 - __main__ - INFO - !!! Initializing WebDriver with stealth configuration !!!
+2025-09-10 16:42:22,101 - WDM - INFO - ====== WebDriver manager ======
+2025-09-10 16:42:23,944 - WDM - INFO - Get LATEST geckodriver version for 142.0 firefox
+2025-09-10 16:42:23,945 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+2025-09-10 16:42:25,452 - urllib3.connectionpool - DEBUG - https://api.github.com:443 "GET /repos/mozilla/geckodriver/releases/latest HTTP/1.1" 200 3215
+2025-09-10 16:42:25,456 - WDM - INFO - Get LATEST geckodriver version for 142.0 firefox
+2025-09-10 16:42:25,458 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+2025-09-10 16:42:26,942 - urllib3.connectionpool - DEBUG - https://api.github.com:443 "GET /repos/mozilla/geckodriver/releases/latest HTTP/1.1" 200 3215
+2025-09-10 16:42:26,947 - WDM - INFO - Driver [/home/odinaka/.wdm/drivers/geckodriver/linux64/v0.36.0/geckodriver] found in cache
+2025-09-10 16:42:26,949 - selenium.webdriver.common.driver_finder - DEBUG - Skipping Selenium Manager; path to firefox driver specified in Service class: /home/odinaka/.wdm/drivers/geckodriver/linux64/v0.36.0/geckodriver
+2025-09-10 16:42:26,951 - selenium.webdriver.common.service - DEBUG - Started executable: `/home/odinaka/.wdm/drivers/geckodriver/linux64/v0.36.0/geckodriver` in a child process with pid: 34479 using 0 to output -3
+2025-09-10 16:42:26,963 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:60105/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'firefox', 'acceptInsecureCerts': True, 'moz:debuggerAddress': True, 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'moz:firefoxOptions': {'prefs': {'remote.active-protocols': 1, 'general.useragent.override': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0', 'dom.webdriver.enabled': False}}}}}
+2025-09-10 16:42:26,964 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:60105
+2025-09-10 16:42:32,155 - urllib3.connectionpool - DEBUG - http://localhost:60105 "POST /session HTTP/1.1" 500 0
+2025-09-10 16:42:32,156 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=500 | data={"value":{"error":"unknown error","message":"Process unexpectedly closed with status 1","stacktrace":""}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '105', 'date': 'Wed, 10 Sep 2025 15:42:26 GMT'})
+2025-09-10 16:42:32,156 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2025-09-10 16:42:32,197 - __main__ - ERROR - Failed to initialize WebDriver: Message: Process unexpectedly closed with status 1
+
+2025-09-10 16:42:32,197 - __main__ - ERROR - !!! Multi-day scraping job failed: Message: Process unexpectedly closed with status 1
+
+2025-09-10 20:36:58,578 - __main__ - INFO - Earnings scraper initialized
+2025-09-10 20:36:58,580 - __main__ - INFO - Starting 1-day earnings scraping job
+2025-09-10 20:36:58,580 - __main__ - INFO - !!! Initializing WebDriver with stealth configuration !!!
+2025-09-10 20:36:58,580 - WDM - INFO - ====== WebDriver manager ======
+2025-09-10 20:37:02,250 - WDM - INFO - Get LATEST geckodriver version for 142.0 firefox
+2025-09-10 20:37:02,253 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+2025-09-10 20:37:03,284 - urllib3.connectionpool - DEBUG - https://api.github.com:443 "GET /repos/mozilla/geckodriver/releases/latest HTTP/1.1" 200 None
+2025-09-10 20:37:03,298 - WDM - INFO - Get LATEST geckodriver version for 142.0 firefox
+2025-09-10 20:37:03,299 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+2025-09-10 20:37:03,996 - urllib3.connectionpool - DEBUG - https://api.github.com:443 "GET /repos/mozilla/geckodriver/releases/latest HTTP/1.1" 200 3214
+2025-09-10 20:37:04,001 - WDM - INFO - Driver [/home/odinaka/.wdm/drivers/geckodriver/linux64/v0.36.0/geckodriver] found in cache
+2025-09-10 20:37:04,001 - selenium.webdriver.common.driver_finder - DEBUG - Skipping Selenium Manager; path to firefox driver specified in Service class: /home/odinaka/.wdm/drivers/geckodriver/linux64/v0.36.0/geckodriver
+2025-09-10 20:37:04,004 - selenium.webdriver.common.service - DEBUG - Started executable: `/home/odinaka/.wdm/drivers/geckodriver/linux64/v0.36.0/geckodriver` in a child process with pid: 35783 using 0 to output -3
+2025-09-10 20:37:04,077 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:32851/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'firefox', 'acceptInsecureCerts': True, 'moz:debuggerAddress': True, 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'moz:firefoxOptions': {'prefs': {'remote.active-protocols': 1, 'general.useragent.override': 'Mozilla/5.0 (X11; Linux x86_64; rv:121.0) Gecko/20100101 Firefox/121.0', 'dom.webdriver.enabled': False}}}}}
+2025-09-10 20:37:04,078 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:32851
+2025-09-10 20:37:17,804 - urllib3.connectionpool - DEBUG - http://localhost:32851 "POST /session HTTP/1.1" 500 0
+2025-09-10 20:37:17,804 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=500 | data={"value":{"error":"unknown error","message":"Process unexpectedly closed with status 1","stacktrace":""}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '105', 'date': 'Wed, 10 Sep 2025 19:37:04 GMT'})
+2025-09-10 20:37:17,804 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2025-09-10 20:37:17,850 - __main__ - ERROR - Failed to initialize WebDriver: Message: Process unexpectedly closed with status 1
+
+2025-09-10 20:37:17,850 - __main__ - ERROR - !!! Multi-day scraping job failed: Message: Process unexpectedly closed with status 1
+
+2025-09-10 21:42:17,087 - __main__ - INFO - Earnings scraper initialized
+2025-09-10 21:42:17,090 - __main__ - INFO - Starting 1-day earnings scraping job
+2025-09-10 21:42:17,090 - __main__ - INFO - !!! Initializing WebDriver with stealth configuration !!!
+2025-09-10 21:42:17,090 - WDM - INFO - ====== WebDriver manager ======
+2025-09-10 21:42:17,967 - WDM - INFO - Get LATEST geckodriver version for None firefox
+2025-09-10 21:42:17,997 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+2025-09-10 21:42:18,884 - urllib3.connectionpool - DEBUG - https://api.github.com:443 "GET /repos/mozilla/geckodriver/releases/latest HTTP/1.1" 200 None
+2025-09-10 21:42:18,888 - WDM - INFO - Getting latest mozilla release info for v0.36.0
+2025-09-10 21:42:18,891 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+2025-09-10 21:42:19,718 - urllib3.connectionpool - DEBUG - https://api.github.com:443 "GET /repos/mozilla/geckodriver/releases/tags/v0.36.0 HTTP/1.1" 200 None
+2025-09-10 21:42:19,723 - WDM - INFO - About to download new driver from https://github.com/mozilla/geckodriver/releases/download/v0.36.0/geckodriver-v0.36.0-linux64.tar.gz
+2025-09-10 21:42:19,725 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): github.com:443
+2025-09-10 21:42:20,693 - urllib3.connectionpool - DEBUG - https://github.com:443 "GET /mozilla/geckodriver/releases/download/v0.36.0/geckodriver-v0.36.0-linux64.tar.gz HTTP/1.1" 302 0
+2025-09-10 21:42:20,697 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): release-assets.githubusercontent.com:443
+2025-09-10 21:42:21,713 - urllib3.connectionpool - DEBUG - https://release-assets.githubusercontent.com:443 "GET /github-production-release-asset/25354393/73faebef-d9f0-4bca-a87c-a8332a5f9deb?sp=r&sv=2018-11-09&sr=b&spr=https&se=2025-09-10T21%3A32%3A27Z&rscd=attachment%3B+filename%3Dgeckodriver-v0.36.0-linux64.tar.gz&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2025-09-10T20%3A31%3A39Z&ske=2025-09-10T21%3A32%3A27Z&sks=b&skv=2018-11-09&sig=s0t5Jyeb1eV5hss2xRBN%2FvDoPVM1mb%2Fg4hTu0XaxAc8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc1NzUzNzEzMCwibmJmIjoxNzU3NTM2ODMwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.u9naGM6aalR3_1fIluy-ba1mu4fDhpjKD2CJMHj65zM&response-content-disposition=attachment%3B%20filename%3Dgeckodriver-v0.36.0-linux64.tar.gz&response-content-type=application%2Foctet-stream HTTP/1.1" 200 2306404
+2025-09-10 21:42:21,713 - WDM - INFO - Driver downloading response is 200
+2025-09-10 21:42:24,646 - WDM - INFO - Get LATEST geckodriver version for None firefox
+2025-09-10 21:42:24,648 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+2025-09-10 21:42:25,322 - urllib3.connectionpool - DEBUG - https://api.github.com:443 "GET /repos/mozilla/geckodriver/releases/latest HTTP/1.1" 200 3206
+2025-09-10 21:42:25,834 - WDM - INFO - Get LATEST geckodriver version for None firefox
+2025-09-10 21:42:25,835 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+2025-09-10 21:42:26,457 - urllib3.connectionpool - DEBUG - https://api.github.com:443 "GET /repos/mozilla/geckodriver/releases/latest HTTP/1.1" 200 3206
+2025-09-10 21:42:26,879 - WDM - INFO - Driver has been saved in cache [/home/odinaka/.wdm/drivers/geckodriver/linux64/v0.36.0]
+2025-09-10 21:42:26,883 - selenium.webdriver.common.driver_finder - DEBUG - Skipping Selenium Manager; path to firefox driver specified in Service class: /home/odinaka/.wdm/drivers/geckodriver/linux64/v0.36.0/geckodriver
+2025-09-10 21:42:26,886 - selenium.webdriver.common.service - DEBUG - Started executable: `/home/odinaka/.wdm/drivers/geckodriver/linux64/v0.36.0/geckodriver` in a child process with pid: 40722 using 0 to output -3
+2025-09-10 21:42:26,900 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:51751/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'firefox', 'acceptInsecureCerts': True, 'moz:debuggerAddress': True, 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'moz:firefoxOptions': {'prefs': {'remote.active-protocols': 1, 'general.useragent.override': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:121.0) Gecko/20100101 Firefox/121.0', 'dom.webdriver.enabled': False}}}}}
+2025-09-10 21:42:26,901 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:51751
+2025-09-10 21:42:27,501 - urllib3.connectionpool - DEBUG - http://localhost:51751 "POST /session HTTP/1.1" 500 0
+2025-09-10 21:42:27,501 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=500 | data={"value":{"error":"unknown error","message":"Process unexpectedly closed with status 46","stacktrace":""}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '106', 'date': 'Wed, 10 Sep 2025 20:42:26 GMT'})
+2025-09-10 21:42:27,501 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2025-09-10 21:42:27,526 - __main__ - ERROR - Failed to initialize WebDriver: Message: Process unexpectedly closed with status 46
+
+2025-09-10 21:42:27,527 - __main__ - ERROR - !!! Multi-day scraping job failed: Message: Process unexpectedly closed with status 46
+
+2025-09-10 21:42:58,203 - __main__ - INFO - Earnings scraper initialized
+2025-09-10 21:42:58,204 - __main__ - INFO - Starting 1-day earnings scraping job
+2025-09-10 21:42:58,204 - __main__ - INFO - !!! Initializing WebDriver with stealth configuration !!!
+2025-09-10 21:42:58,204 - WDM - INFO - ====== WebDriver manager ======
+2025-09-10 21:43:01,060 - WDM - INFO - Get LATEST geckodriver version for 142.0 firefox
+2025-09-10 21:43:01,064 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+2025-09-10 21:43:01,894 - urllib3.connectionpool - DEBUG - https://api.github.com:443 "GET /repos/mozilla/geckodriver/releases/latest HTTP/1.1" 200 None
+2025-09-10 21:43:01,899 - WDM - INFO - Get LATEST geckodriver version for 142.0 firefox
+2025-09-10 21:43:01,901 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+2025-09-10 21:43:02,577 - urllib3.connectionpool - DEBUG - https://api.github.com:443 "GET /repos/mozilla/geckodriver/releases/latest HTTP/1.1" 200 3206
+2025-09-10 21:43:02,583 - WDM - INFO - Driver [/home/odinaka/.wdm/drivers/geckodriver/linux64/v0.36.0/geckodriver] found in cache
+2025-09-10 21:43:02,586 - selenium.webdriver.common.driver_finder - DEBUG - Skipping Selenium Manager; path to firefox driver specified in Service class: /home/odinaka/.wdm/drivers/geckodriver/linux64/v0.36.0/geckodriver
+2025-09-10 21:43:02,589 - selenium.webdriver.common.service - DEBUG - Started executable: `/home/odinaka/.wdm/drivers/geckodriver/linux64/v0.36.0/geckodriver` in a child process with pid: 41393 using 0 to output -3
+2025-09-10 21:43:02,602 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:55091/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'firefox', 'acceptInsecureCerts': True, 'moz:debuggerAddress': True, 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'moz:firefoxOptions': {'prefs': {'remote.active-protocols': 1, 'general.useragent.override': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:121.0) Gecko/20100101 Firefox/121.0', 'dom.webdriver.enabled': False}}}}}
+2025-09-10 21:43:02,603 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:55091
+2025-09-10 21:43:14,017 - urllib3.connectionpool - DEBUG - http://localhost:55091 "POST /session HTTP/1.1" 500 0
+2025-09-10 21:43:14,018 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=500 | data={"value":{"error":"unknown error","message":"Process unexpectedly closed with status 1","stacktrace":""}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '105', 'date': 'Wed, 10 Sep 2025 20:43:02 GMT'})
+2025-09-10 21:43:14,018 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2025-09-10 21:43:14,074 - __main__ - ERROR - Failed to initialize WebDriver: Message: Process unexpectedly closed with status 1
+
+2025-09-10 21:43:14,074 - __main__ - ERROR - !!! Multi-day scraping job failed: Message: Process unexpectedly closed with status 1
+
+2025-09-10 21:43:23,722 - __main__ - INFO - Earnings scraper initialized
+2025-09-10 21:43:23,722 - __main__ - INFO - Starting 1-day earnings scraping job
+2025-09-10 21:43:23,722 - __main__ - INFO - !!! Initializing WebDriver with stealth configuration !!!
+2025-09-10 21:43:23,723 - WDM - INFO - ====== WebDriver manager ======
+2025-09-10 21:43:24,908 - WDM - INFO - Get LATEST geckodriver version for None firefox
+2025-09-10 21:43:24,912 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+2025-09-10 21:43:25,791 - urllib3.connectionpool - DEBUG - https://api.github.com:443 "GET /repos/mozilla/geckodriver/releases/latest HTTP/1.1" 200 3206
+2025-09-10 21:43:25,795 - WDM - INFO - Getting latest mozilla release info for v0.36.0
+2025-09-10 21:43:25,798 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+2025-09-10 21:43:26,618 - urllib3.connectionpool - DEBUG - https://api.github.com:443 "GET /repos/mozilla/geckodriver/releases/tags/v0.36.0 HTTP/1.1" 200 None
+2025-09-10 21:43:26,632 - WDM - INFO - About to download new driver from https://github.com/mozilla/geckodriver/releases/download/v0.36.0/geckodriver-v0.36.0-linux64.tar.gz
+2025-09-10 21:43:26,637 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): github.com:443
+2025-09-10 21:43:27,334 - urllib3.connectionpool - DEBUG - https://github.com:443 "GET /mozilla/geckodriver/releases/download/v0.36.0/geckodriver-v0.36.0-linux64.tar.gz HTTP/1.1" 302 0
+2025-09-10 21:43:27,337 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): release-assets.githubusercontent.com:443
+2025-09-10 21:43:28,353 - urllib3.connectionpool - DEBUG - https://release-assets.githubusercontent.com:443 "GET /github-production-release-asset/25354393/73faebef-d9f0-4bca-a87c-a8332a5f9deb?sp=r&sv=2018-11-09&sr=b&spr=https&se=2025-09-10T21%3A38%3A46Z&rscd=attachment%3B+filename%3Dgeckodriver-v0.36.0-linux64.tar.gz&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2025-09-10T20%3A38%3A02Z&ske=2025-09-10T21%3A38%3A46Z&sks=b&skv=2018-11-09&sig=71ioVMPIC%2BawnuDcPdI55XEH5qRQwnQGH5qGu3gaIU4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc1NzUzNzI2NSwibmJmIjoxNzU3NTM2OTY1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.TEGb5NMmQXIuMi0rnbTILi-tOcJ2VcAi3aJjW6prBJ0&response-content-disposition=attachment%3B%20filename%3Dgeckodriver-v0.36.0-linux64.tar.gz&response-content-type=application%2Foctet-stream HTTP/1.1" 200 2306404
+2025-09-10 21:43:28,354 - WDM - INFO - Driver downloading response is 200
+2025-09-10 21:43:31,884 - WDM - INFO - Get LATEST geckodriver version for None firefox
+2025-09-10 21:43:31,884 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+2025-09-10 21:43:32,563 - urllib3.connectionpool - DEBUG - https://api.github.com:443 "GET /repos/mozilla/geckodriver/releases/latest HTTP/1.1" 200 3206
+2025-09-10 21:43:33,110 - WDM - INFO - Get LATEST geckodriver version for None firefox
+2025-09-10 21:43:33,111 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+2025-09-10 21:43:33,735 - urllib3.connectionpool - DEBUG - https://api.github.com:443 "GET /repos/mozilla/geckodriver/releases/latest HTTP/1.1" 200 3206
+2025-09-10 21:43:34,179 - WDM - INFO - Driver has been saved in cache [/home/odinaka/.wdm/drivers/geckodriver/linux64/v0.36.0]
+2025-09-10 21:43:34,183 - selenium.webdriver.common.driver_finder - DEBUG - Skipping Selenium Manager; path to firefox driver specified in Service class: /home/odinaka/.wdm/drivers/geckodriver/linux64/v0.36.0/geckodriver
+2025-09-10 21:43:34,187 - selenium.webdriver.common.service - DEBUG - Started executable: `/home/odinaka/.wdm/drivers/geckodriver/linux64/v0.36.0/geckodriver` in a child process with pid: 42446 using 0 to output -3
+2025-09-10 21:43:34,199 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:43755/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'firefox', 'acceptInsecureCerts': True, 'moz:debuggerAddress': True, 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'moz:firefoxOptions': {'prefs': {'remote.active-protocols': 1, 'general.useragent.override': 'Mozilla/5.0 (X11; Linux x86_64; rv:121.0) Gecko/20100101 Firefox/121.0', 'dom.webdriver.enabled': False}}}}}
+2025-09-10 21:43:34,200 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:43755
+2025-09-10 21:43:35,110 - urllib3.connectionpool - DEBUG - http://localhost:43755 "POST /session HTTP/1.1" 500 0
+2025-09-10 21:43:35,111 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=500 | data={"value":{"error":"unknown error","message":"Process unexpectedly closed with status 46","stacktrace":""}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '106', 'date': 'Wed, 10 Sep 2025 20:43:34 GMT'})
+2025-09-10 21:43:35,111 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2025-09-10 21:43:35,183 - __main__ - ERROR - Failed to initialize WebDriver: Message: Process unexpectedly closed with status 46
+
+2025-09-10 21:43:35,183 - __main__ - ERROR - !!! Multi-day scraping job failed: Message: Process unexpectedly closed with status 46
+
+2025-09-10 21:56:28,991 - __main__ - INFO - Earnings scraper initialized
+2025-09-10 21:56:28,993 - __main__ - INFO - Starting 1-day earnings scraping job
+2025-09-10 21:56:28,994 - __main__ - INFO - !!! Initializing WebDriver with stealth configuration !!!
+2025-09-10 21:56:28,994 - WDM - INFO - ====== WebDriver manager ======
+2025-09-10 21:56:30,321 - WDM - INFO - Get LATEST geckodriver version for None firefox
+2025-09-10 21:56:30,350 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+2025-09-10 21:56:31,395 - urllib3.connectionpool - DEBUG - https://api.github.com:443 "GET /repos/mozilla/geckodriver/releases/latest HTTP/1.1" 200 3213
+2025-09-10 21:56:31,399 - WDM - INFO - Getting latest mozilla release info for v0.36.0
+2025-09-10 21:56:31,402 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+2025-09-10 21:56:32,195 - urllib3.connectionpool - DEBUG - https://api.github.com:443 "GET /repos/mozilla/geckodriver/releases/tags/v0.36.0 HTTP/1.1" 200 None
+2025-09-10 21:56:32,199 - WDM - INFO - About to download new driver from https://github.com/mozilla/geckodriver/releases/download/v0.36.0/geckodriver-v0.36.0-linux64.tar.gz
+2025-09-10 21:56:32,201 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): github.com:443
+2025-09-10 21:56:33,235 - urllib3.connectionpool - DEBUG - https://github.com:443 "GET /mozilla/geckodriver/releases/download/v0.36.0/geckodriver-v0.36.0-linux64.tar.gz HTTP/1.1" 302 0
+2025-09-10 21:56:33,237 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): release-assets.githubusercontent.com:443
+2025-09-10 21:56:34,198 - urllib3.connectionpool - DEBUG - https://release-assets.githubusercontent.com:443 "GET /github-production-release-asset/25354393/73faebef-d9f0-4bca-a87c-a8332a5f9deb?sp=r&sv=2018-11-09&sr=b&spr=https&se=2025-09-10T21%3A31%3A37Z&rscd=attachment%3B+filename%3Dgeckodriver-v0.36.0-linux64.tar.gz&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2025-09-10T20%3A30%3A40Z&ske=2025-09-10T21%3A31%3A37Z&sks=b&skv=2018-11-09&sig=3%2FCPJWBTD3AMeMvwEaFtU%2FNk4XuiuINjcziAMuG9XjI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc1NzUzODA1MCwibmJmIjoxNzU3NTM3NzUwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.LPJdyl6BNWhC-e7iktFxEkEjmFWpHof6-rLqxNF1vgc&response-content-disposition=attachment%3B%20filename%3Dgeckodriver-v0.36.0-linux64.tar.gz&response-content-type=application%2Foctet-stream HTTP/1.1" 200 2306404
+2025-09-10 21:56:34,199 - WDM - INFO - Driver downloading response is 200
+2025-09-10 21:56:36,631 - WDM - INFO - Get LATEST geckodriver version for None firefox
+2025-09-10 21:56:36,631 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+2025-09-10 21:56:37,391 - urllib3.connectionpool - DEBUG - https://api.github.com:443 "GET /repos/mozilla/geckodriver/releases/latest HTTP/1.1" 200 3213
+2025-09-10 21:56:38,129 - WDM - INFO - Get LATEST geckodriver version for None firefox
+2025-09-10 21:56:38,131 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+2025-09-10 21:56:38,769 - urllib3.connectionpool - DEBUG - https://api.github.com:443 "GET /repos/mozilla/geckodriver/releases/latest HTTP/1.1" 200 3213
+2025-09-10 21:56:39,508 - WDM - INFO - Driver has been saved in cache [/home/odinaka/.wdm/drivers/geckodriver/linux64/v0.36.0]
+2025-09-10 21:56:39,512 - selenium.webdriver.common.driver_finder - DEBUG - Skipping Selenium Manager; path to firefox driver specified in Service class: /home/odinaka/.wdm/drivers/geckodriver/linux64/v0.36.0/geckodriver
+2025-09-10 21:56:39,515 - selenium.webdriver.common.service - DEBUG - Started executable: `/home/odinaka/.wdm/drivers/geckodriver/linux64/v0.36.0/geckodriver` in a child process with pid: 46410 using 0 to output -3
+2025-09-10 21:56:39,527 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:55615/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'firefox', 'acceptInsecureCerts': True, 'moz:debuggerAddress': True, 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'moz:firefoxOptions': {'prefs': {'remote.active-protocols': 1, 'general.useragent.override': 'Mozilla/5.0 (X11; Linux x86_64; rv:121.0) Gecko/20100101 Firefox/121.0', 'dom.webdriver.enabled': False}}}}}
+2025-09-10 21:56:39,528 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:55615
+2025-09-10 21:56:40,769 - urllib3.connectionpool - DEBUG - http://localhost:55615 "POST /session HTTP/1.1" 500 0
+2025-09-10 21:56:40,769 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=500 | data={"value":{"error":"unknown error","message":"Process unexpectedly closed with status 46","stacktrace":""}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '106', 'date': 'Wed, 10 Sep 2025 20:56:39 GMT'})
+2025-09-10 21:56:40,770 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2025-09-10 21:56:40,844 - __main__ - ERROR - Failed to initialize WebDriver: Message: Process unexpectedly closed with status 46
+
+2025-09-10 21:56:40,844 - __main__ - ERROR - !!! Multi-day scraping job failed: Message: Process unexpectedly closed with status 46
+
