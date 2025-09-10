@@ -60,40 +60,19 @@ class AntiDetectionSystem:
 
     # real browser user agents
     USER_AGENTS = [
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0"
+        "Mozilla/5.0 (X11; Linux x86_64; rv:121.0) Gecko/20100101 Firefox/121.0",
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:121.0) Gecko/20100101 Firefox/121.0",
     ]
 
     @classmethod
-    def get_stealth_chrome_options(cls) -> Options:
-        """
-        configure Chrome to avoid detection
-        """
-        options = Options()
+    def get_stealth_firefox_options(cls) -> FirefoxOptions:
+        options = FirefoxOptions()
 
-        # basic stealth options
-        options.add_argument("--no-sandbox")
-        options.add_argument("--disable-dev-shm-usage")
-        options.add_argument("--disable-blink-features=AutomationControlled")
-        options.add_experimental_option("excludeSwitches", ["enable-automation"])
-        options.add_experimental_option('useAutomationExtension', False)
-
-        # random user agent to look like different users
+        # Firefox preferences (not arguments like Chrome)
         user_agent = random.choice(cls.USER_AGENTS)
-        options.add_argument(f'--user-agent={user_agent}')
-
-        # additional stealth measures
-        options.add_argument("--disable-extensions")
-        options.add_argument("--disable-plugins-discovery")
-        options.add_argument("--disable-web-security")
-        options.add_argument("--allow-running-insecure-content")
-
-        # window size randomization
-        width = random.randint(1200, 1920)
-        height = random.randint(800, 1080)
-        options.add_argument(f"--window-size={width},{height}")
+        options.set_preference("general.useragent.override", user_agent)
+        options.set_preference("dom.webdriver.enabled", False)
 
         return options
 
@@ -185,15 +164,15 @@ class EarningsCalendarScraper:
             self.logger.info("!!! Initializing WebDriver with stealth configuration !!!")
 
             #
-            options = AntiDetectionSystem.get_stealth_chrome_options()
+            options = AntiDetectionSystem.get_stealth_firefox_options()
 
             if self.headless:
                 options.add_argument("--headless")
                 self.logger.info("Running in headless mode")
 
             # init driver
-            service = Service(ChromeDriverManager().install())
-            self.driver = webdriver.Chrome(service=service, options=options)
+            service = Service(GeckoDriverManager().install())
+            self.driver = webdriver.Firefox(service=service, options=options)
             self.wait = WebDriverWait(self.driver, 15)
 
             #stealth scripts to remove webdriver traces
