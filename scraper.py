@@ -10,7 +10,7 @@ TODO:
 
 """
 
-import os, json, random, logging, time
+import os, json, random, logging, time, tempfile
 import pandas as pd
 from datetime import datetime, timedelta
 from typing import List, Optional, Dict
@@ -75,6 +75,31 @@ class AntiDetectionSystem:
         options.add_argument("--disable-blink-features=AutomationControlled")
         options.add_experimental_option("excludeSwitches", ["enable-automation"])
         options.add_experimental_option('useAutomationExtension', False)
+
+        options.add_argument("--disable-gpu")
+        options.add_argument("--disable-software-rasterizer")
+        options.add_argument("--remote-debugging-port=9222")
+        options.add_argument("--disable-extensions")
+        options.add_argument("--disable-plugins")
+        options.add_argument("--disable-web-security")
+        options.add_argument("--allow-running-insecure-content")
+
+        temp_dir = tempfile.mkdtemp()
+        options.add_argument(f"--user-data-dir={temp_dir}")
+        options.add_argument(f"--data-path={temp_dir}")
+        options.add_argument(f"--disk-cache-dir={temp_dir}")
+
+        options.add_argument("--disable-background-timer-throttling")
+        options.add_argument("--disable-backgrounding-occluded-windows")
+        options.add_argument("--disable-renderer-backgrounding")
+        options.add_argument("--disable-features=TranslateUI")
+        options.add_argument("--disable-ipc-flooding-protection")
+        options.add_argument("--window-size=1920,1080")
+        options.add_argument("--memory-pressure-off")
+        options.add_argument("--max_old_space_size=4096")
+
+        options.add_argument("--disable-default-apps")
+        options.add_argument("--disable-sync")
 
         # random user agent
         user_agent = random.choice(cls.USER_AGENTS)
@@ -170,15 +195,15 @@ class EarningsCalendarScraper:
             self.logger.info("!!! Initializing WebDriver with stealth configuration !!!")
 
             #
-            options = AntiDetectionSystem.get_stealth_firefox_options()
+            options = AntiDetectionSystem.get_stealth_chrome_options()
 
             if self.headless:
-                options.add_argument("-headless")
+                options.add_argument("--headless")
                 self.logger.info("Running in headless mode")
 
             # init driver
-            service = Service(GeckoDriverManager().install())
-            self.driver = webdriver.Firefox(service=service, options=options)
+            service = Service(ChromeDriverManager().install())
+            self.driver = webdriver.Chrome(service=service, options=options)
             self.wait = WebDriverWait(self.driver, 15)
 
             #stealth scripts to remove webdriver traces
@@ -506,7 +531,7 @@ class EarningsCalendarScraper:
             'metadata': {
                 'scrape_timestamp': datetime.now().isoformat(),
                 'total_events': len(self.scraped_events),
-                'session_stats': self.session_stats,
+                'session_stats': {k: v.isoformat() if isinstance(v, datetime) else v for k, v in self.session_stats.items()},
                 'version': '1.0'
             },
             'earnings_events': [asdict(event) for event in self.scraped_events]
@@ -559,8 +584,7 @@ class EarningsCalendarScraper:
             'events_with_eps_estimates': df['eps_estimate'].notna().sum(),
             'events_with_revenue_estimates': df['revenue_estimate'].notna().sum(),
             'sectors_represented': df['sector'].value_counts().to_dict() if 'sector' in df.columns else {},
-            'top_companies_by_market_cap': df.nlargest(10, 'market_cap')[
-                ['symbol', 'company_name', 'market_cap']].to_dict('records') if 'market_cap' in df.columns else []
+            'top_companies_by_market_cap': []
         }
 
         return report
