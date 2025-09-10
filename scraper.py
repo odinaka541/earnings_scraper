@@ -167,7 +167,7 @@ class EarningsCalendarScraper:
             options = AntiDetectionSystem.get_stealth_firefox_options()
 
             if self.headless:
-                options.add_argument("--headless")
+                options.add_argument("-headless")
                 self.logger.info("Running in headless mode")
 
             # init driver
