@@ -1,0 +1,24 @@
+2025-09-10 15:17:24,000 - __main__ - INFO - Earnings scraper initialized
+2025-09-10 15:17:24,000 - __main__ - INFO - Starting 1-day earnings scraping job
+2025-09-10 15:17:24,000 - __main__ - INFO - !!! Initializing WebDriver with stealth configuration !!!
+2025-09-10 15:17:24,000 - WDM - INFO - ====== WebDriver manager ======
+2025-09-10 15:17:24,171 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-10 15:17:24,173 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): chromedriver.storage.googleapis.com:443
+2025-09-10 15:17:26,583 - urllib3.connectionpool - DEBUG - https://chromedriver.storage.googleapis.com:443 "GET /LATEST_RELEASE HTTP/1.1" 200 13
+2025-09-10 15:17:26,586 - WDM - INFO - About to download new driver from https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip
+2025-09-10 15:17:26,588 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): chromedriver.storage.googleapis.com:443
+2025-09-10 15:17:27,511 - urllib3.connectionpool - DEBUG - https://chromedriver.storage.googleapis.com:443 "GET /114.0.5735.90/chromedriver_linux64.zip HTTP/1.1" 200 7407250
+2025-09-10 15:17:27,512 - WDM - INFO - Driver downloading response is 200
+2025-09-10 15:17:50,897 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-10 15:17:50,898 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): chromedriver.storage.googleapis.com:443
+2025-09-10 15:17:52,406 - urllib3.connectionpool - DEBUG - https://chromedriver.storage.googleapis.com:443 "GET /LATEST_RELEASE HTTP/1.1" 200 13
+2025-09-10 15:17:52,553 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-10 15:17:52,554 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): chromedriver.storage.googleapis.com:443
+2025-09-10 15:17:53,840 - urllib3.connectionpool - DEBUG - https://chromedriver.storage.googleapis.com:443 "GET /LATEST_RELEASE HTTP/1.1" 200 13
+2025-09-10 15:17:53,935 - WDM - INFO - Driver has been saved in cache [/home/odinaka/.wdm/drivers/chromedriver/linux64/114.0.5735.90]
+2025-09-10 15:17:53,936 - selenium.webdriver.common.driver_finder - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: /home/odinaka/.wdm/drivers/chromedriver/linux64/114.0.5735.90/chromedriver
+2025-09-10 15:17:53,937 - selenium.webdriver.common.service - DEBUG - Started executable: `/home/odinaka/.wdm/drivers/chromedriver/linux64/114.0.5735.90/chromedriver` in a child process with pid: 18694 using 0 to output -3
+2025-09-10 15:17:53,948 - __main__ - ERROR - Failed to initialize WebDriver: Message: Service /home/odinaka/.wdm/drivers/chromedriver/linux64/114.0.5735.90/chromedriver unexpectedly exited. Status code was: 127
+
+2025-09-10 15:17:53,948 - __main__ - ERROR - !!! Multi-day scraping job failed: Message: Service /home/odinaka/.wdm/drivers/chromedriver/linux64/114.0.5735.90/chromedriver unexpectedly exited. Status code was: 127
+

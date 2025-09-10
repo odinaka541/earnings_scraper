@@ -1,0 +1,10 @@
+#
+pandas
+webdriver-manager
+selenium
+beautifulsoup4
+#random
+#time
+#typing
+#datetime
+#dataclasses
