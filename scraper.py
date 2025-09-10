@@ -27,3 +27,25 @@ from selenium.common.exceptions import (
     WebDriverException,
     ElementNotInteractableException
 )
+
+
+@dataclass
+class EarningsEvent:
+    """
+    Data structure for earnings events
+    Using dataclass for clean, type-safe data handling
+    """
+    symbol: str
+    company_name: str
+    earnings_date: str
+    earnings_time: str  # "BMO", "AMC", or specific time
+    eps_estimate: Optional[float] = None
+    revenue_estimate: Optional[str] = None
+    market_cap: Optional[str] = None
+    sector: Optional[str] = None
+    scraped_timestamp: Optional[str] = None
+
+    def __post_init__(self):
+        """Add timestamp when object is created"""
+        if not self.scraped_timestamp:
+            self.scraped_timestamp = datetime.now().isoformat()
