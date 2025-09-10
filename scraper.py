@@ -576,3 +576,56 @@ class EarningsCalendarScraper:
         }
 
         return report
+
+
+# -----------------------------------------
+def main():
+
+    print("Financial Earnings Calendar Automation System")
+    print("=" * 60)
+
+    # init
+    scraper = EarningsCalendarScraper(
+        headless=False,  # T, prod
+        debug=True
+    )
+
+    try:
+        #
+        events = scraper.run_multi_day_scrape(
+            days=1, # 1 def, abeg
+            enrich_data=False  #
+        )
+
+        if events:
+            print(f"\nSuccessfully scraped {len(events)} earnings events!")
+
+            json_file = scraper.save_to_json()
+            csv_file = scraper.save_to_csv()
+
+            report = scraper.generate_summary_report()
+            print(f"\n SUMMARY REPORT:")
+            print(f"Total events: {report['total_events']}")
+            print(f"Unique companies: {report['unique_companies']}")
+            print(f"Date range: {report['date_range']['start']} to {report['date_range']['end']}")
+
+            #
+            print(f"\n SAMPLE EVENTS:")
+            for i, event in enumerate(events[:5]):
+                print(f"{i + 1}. {event.symbol} ({event.company_name}) - {event.earnings_date} {event.earnings_time}")
+
+            print(f"\n Files saved:")
+            print(f"   JSON: {json_file}")
+            print(f"   CSV: {csv_file}")
+
+        else:
+            print(" No earnings events found. Check logs for details.")
+
+    except Exception as e:
+        print(f" Scraping failed: {e}")
+
+    print("\n Scraping complete!")
+
+
+if __name__ == "__main__":
+    main()
