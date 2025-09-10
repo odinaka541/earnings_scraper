@@ -27,6 +27,8 @@ from selenium.common.exceptions import (
     WebDriverException,
     ElementNotInteractableException
 )
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 
 
 @dataclass
@@ -190,7 +192,8 @@ class EarningsCalendarScraper:
                 self.logger.info("Running in headless mode")
 
             # init driver
-            self.driver = webdriver.Chrome(options=options)
+            service = Service(ChromeDriverManager().install())
+            self.driver = webdriver.Chrome(service=service, options=options)
             self.wait = WebDriverWait(self.driver, 15)
 
             #stealth scripts to remove webdriver traces
